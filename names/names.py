@@ -3,11 +3,11 @@ import time
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
-names_1 = set(f.read().split("\n"))  # List containing 10000 names
+names_1 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 f = open('names_2.txt', 'r')
-names_2 = set(f.read().split("\n"))  # List containing 10000 names
+names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = [name_1 for name_1 in names_1 if name_1 in names_2]
